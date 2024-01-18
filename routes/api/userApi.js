@@ -2,6 +2,9 @@ const express = require('express')
 const router = express.Router();
 const users = require('../../user')
 const uuid = require('uuid')
+const mongoose = require('mongoose');
+
+
 
 // api get all users
 router.get('',(req,res)=>{
@@ -37,6 +40,8 @@ router.post('/',(req,res)=>{
    users.push(newUser);
    res.json(users);
 })
+
+
 
 
 // Update User
