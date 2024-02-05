@@ -34,9 +34,10 @@ router.post('/',(req,res)=>{
     email:req.body.email
    }
    if(!newUser.name || !newUser.email){
+         console.log('POST FAIL')
         return res.status(404).json({msg:"please input"})
    }
-
+   console.log('POST SUCCESS')
    users.push(newUser);
    res.json(users);
 })

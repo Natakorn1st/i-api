@@ -21,6 +21,10 @@ app.get('/',(req,res)=>{
     res.json({msg:"hello"})
 })
 
+app.get('/',(req,res)=>{
+   res.json({msg:"wol"})
+})
+
 // app.post('/api/users/add',(req,res)=>{
 //     const newUser ={
 //         id: uuid.v4(),
