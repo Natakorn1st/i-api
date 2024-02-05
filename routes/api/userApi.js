@@ -31,9 +31,10 @@ router.post('/',(req,res)=>{
    const newUser ={
     id: uuid.v4(),
     name:req.body.name,
-    email:req.body.email
+    location:req.body.location
    }
-   if(!newUser.name || !newUser.email){
+   
+   if(!newUser.name || !newUser.location){
          console.log('POST FAIL')
         return res.status(404).json({msg:"please input"})
    }
